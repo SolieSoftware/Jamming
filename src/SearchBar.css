@@ -1,0 +1,78 @@
+.SearchBar {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7rem;
+    margin-bottom: 6rem;
+}
+
+.SearchBar input {
+    width: 200px;
+    padding: .88rem 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+}
+
+.SearchBar input:focus {
+    outline: none;
+}
+
+.SearchButton {
+    cursor: pointer;
+    width: 8.11rem;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight:bold;
+    background-color: green;
+
+    background-image: linear-gradient(
+        45deg,
+        blue,
+        pink
+    );
+
+    background-size: 270%;
+    background-repeat: repeat;
+    background-position: top right;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
+    border: 0px;
+
+    animation: button-animation 0.65s 0.15s ease-out forwards;
+
+}
+
+.SearchButton:hover {
+    animation: button-animation-rev 0.65s ease-out forwards;
+    transition: 0.5s;
+    box-shadow: 3px 2px10px 1px rgba(0,0,0,0.15);
+
+}
+
+@keyframes button-animation {
+    0% {
+      background-position: top right;
+    }
+    100% {
+      background-position: top left;
+    }
+  }
+  
+  @keyframes button-animation-rev {
+    0% {
+      background-position: top left;
+    }
+    100% {
+      background-position: top right;
+    }
+  }
